@@ -12,6 +12,23 @@ web.xml.
 système.
 
 
+Résumé 2:
+
+Le client envoie des requêtes au serveur grâce aux méthodes du protocole HTTP,
+notamment GET, POST et HEAD.
+– Le conteneur web place chaque requête reçue dans un objet HttpServletRequest,
+et place chaque réponse qu’il initialise dans l’objet HttpServletResponse.
+– Le conteneur transmet chaque couple requête/réponse à une servlet : c’est un objet
+Java assigné à une requête et capable de générer une réponse en conséquence.
+– La servlet est donc le point d’entrée d’une application web, et se déclare dans son
+fichier de configuration web.xml.
+– Une servlet peut se charger de répondre à une requête en particulier, ou à un groupe
+entier de requêtes.
+– Pour pouvoir traiter une requête HTTP de type GET, une servlet doit implémen-
+ter la méthode doGet() ; pour répondre à une requête de type POST, la méthode
+doPost() ; etc.
+– Une servlet n’est pas chargée de l’affichage des données, elle ne doit donc pas s’oc-
+cuper de la présentation (HTML, CSS, etc.).
 
 Partie 1
 ************************************************************
