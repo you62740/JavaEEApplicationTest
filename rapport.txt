@@ -1,5 +1,18 @@
 Suivi de la formation: PLAN 
 
+
+Résumé 1:
+
+– Un IDE permet de simplifier le développement d’un projet dans son ensemble.
+– Tomcat n’est pas un serveur d’applications Java EE au sens complet du terme.
+– La configuration du serveur passe principalement par deux fichiers : server.xml et
+web.xml.
+– Une application web Java EE doit respecter une architecture bien définie.
+– Eclipse modifie l’architecture des applications pour les intégrer correctement à son
+système.
+
+
+
 Partie 1
 ************************************************************
 ************************************************************
