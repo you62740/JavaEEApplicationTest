@@ -35,6 +35,18 @@ Partie 1
 ************************************************************
 - SERVLET
 
+Résumé 1: 
+
+Une page JSP ressemble en apparence à une page HTML, mais en réalité elle est
+bien plus proche d’une servlet : elle contient des balises derrière lesquelles se cache
+du code Java.
+– Une page JSP est exécutée sur le serveur, et la page finale générée et envoyée au
+client est une simple page HTML : le client ne voit pas le code de la JSP.
+– Le répertoire /WEB-INF cache les fichiers qu’il contient à l’extérieur de l’application.
+– La méthode forward() de l’objet RequestDispatcher permet depuis une servlet
+de rediriger la paire requête/réponse HTTP vers une autre servlet ou vers une page
+JSP.
+
 - JSP  
 
 - JAVABEANS
