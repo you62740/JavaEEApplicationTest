@@ -49,6 +49,17 @@ JSP.
 
 - JSP  
 
+– Les commentaires compris entre <%– et –%> ne sont pas visibles dans la page finale
+générée.
+– L’insertion directe de code Java dans une JSP est possible mais très déconseillée.
+– Les directives se placent en début de fichier et permettent de configurer une JSP
+sous différents angles.
+– Il existe 4 portées d’objets différentes, représentant 4 durées de vie différentes : page,
+request, session et application.
+– Une session suit un visiteur de son arrivée sur le site jusqu’à son départ.
+– Les actions standard permettent pour la plupart de manipuler des objets au sein
+d’une JSP, mais sont aujourd’hui de l’histoire ancienne.
+
 - JAVABEANS
 
 – Un bean est un objet Java réutilisable qui représente une entité, et dont les données
