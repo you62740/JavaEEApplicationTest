@@ -13,9 +13,16 @@
         <!-- Initialisation de sa propriété 'prénom' : -->
         <jsp:setProperty name="coyote" property="prenom" value="Wile E."/>
         <!-- Et affichage de sa valeur : -->
-        ${ coyote.prenom }
-        
-        
+        ${ coyote.prenom }<br>
+        <!-- Comparaison d'égalité entre la propriété prenom et la chaîne "Jean-Paul" -->
+		${ coyote.prenom == "Jean-Paul" }<br>
+		
+		<!-- Vérification si la propriété prenom est vide ou nulle -->
+		${ empty coyote.prenom }<br>
+		
+		<!-- Condition ternaire qui affiche la propriété prénom si elle n'est ni vide ni nulle, et la chaîne "Veuillez préciser un prénom" sinon -->
+		${ !empty coyote.prenom ? coyote.prenom : "Veuillez préciser un prénom" }<br>
+		        
     </p>
     </body>
 </html>
