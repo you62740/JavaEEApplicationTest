@@ -60,6 +60,10 @@ request, session et application.
 – Les actions standard permettent pour la plupart de manipuler des objets au sein
 d’une JSP, mais sont aujourd’hui de l’histoire ancienne.
 
+
+
+
+
 - JAVABEANS
 
 – Un bean est un objet Java réutilisable qui représente une entité, et dont les données
@@ -72,6 +76,16 @@ un couple de getter/setter.
 automatiquement les classes compilées depuis les codes sources Java de vos objets.
 – Un bean peut par exemple être transmis d’une servlet vers une page JSP (ou une
 autre servlet) en tant qu’attribut de requête.
+
+-	EL 
+
+- La technologie EL est fondée sur les JavaBeans et sur les collections Java, et existe depuis la version 2.4 de l'API Servlet.
+- Les expressions EL remplacent les actions standard de manipulation des objets.
+Une expression EL permet d'effectuer des tests, interprétés à la volée lors de l'exécution de la page.
+- L'interprétation des expressions EL peut être désactivée via une section dans le fichier web.xml.
+Un objet implicite n'est pas géré par le développeur, mais par le conteneur de servlets.
+- Chaque objet implicite JSP donne accès à un objet mis à disposition par le conteneur.
+- Chaque objet implicite EL est un raccourci vers des données de l'application.
 
 Partie 2:
 ************************************************************
