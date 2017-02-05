@@ -8,15 +8,9 @@
     </head>
     <body>
     <p>
-	<% 
-	String paramLangue = request.getParameter("langue");
-	out.println( "Langue : " + paramLangue );
-	%>
+	Langue : ${ param.langue }
 	<br />
-	<%
-	String paramArticle = request.getParameter("article");
-	out.println( "Article : " + paramArticle );
-	%>
+	Article : ${ param.article }
     </p>
     </body>
 </html>
