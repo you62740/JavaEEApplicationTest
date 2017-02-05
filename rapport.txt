@@ -98,6 +98,13 @@ Partie 2:
 ************************************************************
 -JSTL
 
+la JSTL est composée de cinq bibliothèques de balises standard ;
+	elle permet d'éviter l'utilisation de code Java dans les pages JSP ;
+	elle permet de réduire la quantité de code à écrire ;
+	elle rend le code des pages JSP plus lisible ;
+
+sous Tomcat, il faut placer son fichier .jar sous /WEB-INF/lib pour qu'elle soit correctement intégrée.
+
 Partie 3 :
 ************************************************************
 ************************************************************
