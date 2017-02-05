@@ -87,6 +87,12 @@ Un objet implicite n'est pas géré par le développeur, mais par le conteneur d
 - Chaque objet implicite JSP donne accès à un objet mis à disposition par le conteneur.
 - Chaque objet implicite EL est un raccourci vers des données de l'application.
 
+
+Les expressions EL remplacent élégamment scriptlets et actions standard.
+La technologie EL ne répond malheureusement pas à tous nos besoins.
+La documentation est indispensable, à condition qu'elle soit à jour.
+
+
 Partie 2:
 ************************************************************
 ************************************************************
