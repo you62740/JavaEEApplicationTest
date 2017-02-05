@@ -51,6 +51,17 @@ JSP.
 
 - JAVABEANS
 
+– Un bean est un objet Java réutilisable qui représente une entité, et dont les données
+sont représentées par des propriétés.
+– Un bean est une classe publique et doit avoir au moins un constructeur par défaut,
+public et sans paramètres.
+– Une propriété d’un bean est un champ non public, qui doit être accessible à travers
+un couple de getter/setter.
+– Il faut configurer le build-path d’un projet web sous Eclipse pour qu’il y dépose
+automatiquement les classes compilées depuis les codes sources Java de vos objets.
+– Un bean peut par exemple être transmis d’une servlet vers une page JSP (ou une
+autre servlet) en tant qu’attribut de requête.
+
 Partie 2:
 ************************************************************
 ************************************************************
