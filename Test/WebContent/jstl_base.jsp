@@ -5,6 +5,6 @@
 		<title>Test</title>
 	</head>
 	<body>
-		<c:out value="test" />
-	</body>
+		<c:out value="test"></c:out>
+	</body> 
 </html>
