@@ -8,7 +8,7 @@
     </head>
     <body>
     <p>
-	Langue : ${ param.langue }
+	Langue : ${paramValues.langue[1]}
 	<br />
 	Article : ${ param.article }
     </p>
