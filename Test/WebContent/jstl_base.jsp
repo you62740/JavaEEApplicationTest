@@ -30,5 +30,22 @@
 		
 		<c:out value="${locale}" />
 		
+		
+		<%-- Crée un objet de type String --%>
+		<c:set scope="session" var="description" value="Je suis une loutre." />
+		
+		<%-- Crée un objet du type du bean ici spécifié dans l'attribut 'value'--%>
+		<c:set scope="session" var="tonBean" value="${monBean}" />
+		
+		
+		<!-- ATTENTION BLOQUAGE DEUX HEURES  -->
+		<!-- Initialisation d'un bean de type Coyote avec une action standard, pour l'exemple : -->
+         <jsp:useBean id="coyote" class="com.sdzee.beans.Coyote" />
+
+		<c:set target="${coyote}" property="nom" value="Younes"/>
+		
+		
+
+
 	</body> 
  </html> 
