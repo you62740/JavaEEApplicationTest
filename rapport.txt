@@ -105,6 +105,16 @@ la JSTL est composée de cinq bibliothèques de balises standard ;
 
 sous Tomcat, il faut placer son fichier .jar sous /WEB-INF/lib pour qu'elle soit correctement intégrée.
 
+
+On affiche le contenu d'une variable ou d'un objet avec <c:out>.
+On effectue un test avec <c:if> ou <c:choose>.
+On réalise une boucle sur une collection avec <c:forEach>.
+On génère un lien de manière automatique avec <c:url>.
+On redirige vers une autre page avec <c:redirect>.
+On importe une autre page avec <c:import>.
+
+
+
 Partie 3 :
 ************************************************************
 ************************************************************
