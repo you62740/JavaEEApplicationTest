@@ -5,8 +5,30 @@
  		<title>Test</title>
  	</head>
  	<body>
-		<c:out value="test" />
-	</body>
-		<c:out value="test"></c:out>
+ 		
+ 		<%-- Exemple d'utilisation pour l'attribut default --%>
+		<c:out value="test" /> <%-- Affiche test --%>
+		<c:out value="${bean}" /> <%-- Affiche rien --%>
+		
+		<%-- Exemple d'utilisation pour l'attribut default --%>
+		<c:out value="${bean}" default="test" />
+		
+		<%-- Exemple d'utilisation pour l'attribut escapeXml avec et sans --%>
+		<c:out value="<p>Je suis un 'paragraphe'.</p>" escapeXml="false"/>
+		<c:out value="<p>Je suis un 'paragraphe'.</p>"/>
+		
+		<%-- Cette balise met l'expression "Salut les zéros !" dans l'attribut "message" de la requête : --%>
+		<c:set var="message" value="Salut les zéros !" scope="request" />
+		<br><br>
+		
+		<%-- Affiche l'expression contenue dans la variable "message" de la requête --%>
+		<c:out value="${requestScope.message}" />
+		
+		<c:set var="locale" scope="session">
+   			<c:out value="${param.lang}" default="FR"/>
+		</c:set>
+		
+		<c:out value="${locale}" />
+		
 	</body> 
  </html> 
