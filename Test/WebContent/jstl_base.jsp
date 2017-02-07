@@ -60,5 +60,21 @@
 		</c:choose>
 
 
+		<%-- Boucle calculant le cube des entiers de 0 à 7 et les affichant dans un tableau HTML --%>
+		<table>
+		  <tr>
+		    <th>Valeur</th>
+		    <th>Cube</th>
+		  </tr>
+		
+		<c:forEach var="i" begin="0" end="7" step="1">
+		  <tr>
+		    <td><c:out value="${i}"/></td>
+		    <td><c:out value="${i * i * i}"/></td>
+		  </tr>
+		</c:forEach>
+		
+		</table>
+
 	</body> 
  </html> 
