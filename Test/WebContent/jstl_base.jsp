@@ -48,6 +48,16 @@
 		<%-- Supprime la variable "maVariable" de la session --%>
 		<c:remove var="maVariable" scope="session" />
 		
+		
+		<c:if test="${ 12 > 7 }" var="monTest" scope="session">
+    	Ce test est vrai.
+		</c:if>
+		
+		
+		<c:choose>
+		    <c:when test="${ 12 < 7 }">Action ou texte.</c:when>
+		    <c:otherwise>Autre action ou texte.</c:otherwise>
+		</c:choose>
 
 
 	</body> 
