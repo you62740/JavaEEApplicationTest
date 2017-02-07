@@ -45,6 +45,9 @@
 		<c:set target="${coyote}" property="nom" value="Younes"/>
 		
 		
+		<%-- Supprime la variable "maVariable" de la session --%>
+		<c:remove var="maVariable" scope="session" />
+		
 
 
 	</body> 
