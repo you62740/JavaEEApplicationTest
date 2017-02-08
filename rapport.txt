@@ -113,7 +113,13 @@ On génère un lien de manière automatique avec <c:url>.
 On redirige vers une autre page avec <c:redirect>.
 On importe une autre page avec <c:import>.
 
+- Exercice:
 
+La page devra également être placée à la racine du projet, sous le répertoire WebContent, et sera donc accessible après validation du formulaire de la page http://localhost:8080/jstl_exo1/initForm.jsp. Elle devra simplement afficher :
+
+une liste récapitulant le nom de chaque champ du formulaire et les informations qui y ont été saisies ;
+le nom et le prénom saisis par l'utilisateur ;
+une liste des pays visités par l'utilisateur.
 
 Partie 3 :
 ************************************************************
