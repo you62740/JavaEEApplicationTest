@@ -8,10 +8,12 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.sdzee.bdd.Noms;
+import com.sdzee.beans.Utilisateur;
 
 
 /**
@@ -28,25 +30,22 @@ public class Test extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Cookie[] cookies = request.getCookies();
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("prenom")) {
-                    request.setAttribute("prenom", cookie.getValue());
-                }
-            }
-        }
+        Noms tableNoms = new Noms();
+        request.setAttribute("utilisateurs", tableNoms.recupererUtilisateurs());
         this.getServletContext().getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-        String prenom = request.getParameter("prenom");
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setNom(request.getParameter("nom"));
+        utilisateur.setPrenom(request.getParameter("prenom"));
         
-        Cookie cookie = new Cookie("prenom", prenom);
-        cookie.setMaxAge(60 * 60 * 24 * 30);
-        response.addCookie(cookie);
+        Noms tableNoms = new Noms();
+        tableNoms.ajouterUtilisateur(utilisateur);
+        
+        request.setAttribute("utilisateurs", tableNoms.recupererUtilisateurs());
         
         this.getServletContext().getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
-    }  
+    }
 
 }

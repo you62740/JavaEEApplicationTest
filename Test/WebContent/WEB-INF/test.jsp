@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Toto</title>
+<title>Test</title>
 </head>
 <body>
-
-    <c:out value="${ prenom }" />
     <form method="post" action="toto">
         <p>
             <label for="nom">Nom : </label>
@@ -22,5 +20,10 @@
         <input type="submit" />
     </form>
     
+    <ul>
+        <c:forEach var="utilisateur" items="${ utilisateurs }">
+            <li><c:out value="${ utilisateur.prenom }" /> <c:out value="${ utilisateur.nom }" /></li>
+        </c:forEach>
+    </ul>    
 </body>
 </html>
