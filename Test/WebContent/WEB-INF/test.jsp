@@ -4,18 +4,20 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Test</title>
+<title>toto</title>
 </head>
 <body>
-    <c:if test="${ !empty fichier }"><p><c:out value="Le fichier ${ fichier } (${ description }) a été uploadé !" /></p></c:if>
-    <form method="post" action="toto" enctype="multipart/form-data">
+    <c:if test="${ !empty sessionScope.prenom && !empty sessionScope.nom }">
+        <p>Vous êtes ${ sessionScope.prenom } ${ sessionScope.nom } !</p>
+    </c:if>
+    <form method="post" action="toto">
         <p>
-            <label for="description">Description du fichier : </label>
-            <input type="text" name="description" id="description" />
+            <label for="nom">Nom : </label>
+            <input type="text" name="nom" id="nom" />
         </p>
         <p>
-            <label for="fichier">Fichier à envoyer : </label>
-            <input type="file" name="fichier" id="fichier" />
+            <label for="prenom">Prénom : </label>
+            <input type="text" name="prenom" id="prenom" />
         </p>
         
         <input type="submit" />

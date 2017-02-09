@@ -21,5 +21,6 @@
             ${coyote.prenom}
             ${coyote.nom}
         </p>
-    </body>
+        
+ 		<p>Vous êtes ${ sessionScope.prenom } ${ sessionScope.nom } !</p>    </body>
 </html>
