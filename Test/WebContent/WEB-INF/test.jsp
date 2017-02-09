@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>toto</title>
+<title>Toto</title>
 </head>
 <body>
-    <c:if test="${ !empty sessionScope.prenom && !empty sessionScope.nom }">
-        <p>Vous êtes ${ sessionScope.prenom } ${ sessionScope.nom } !</p>
-    </c:if>
+
+    <c:out value="${ prenom }" />
     <form method="post" action="toto">
         <p>
             <label for="nom">Nom : </label>
