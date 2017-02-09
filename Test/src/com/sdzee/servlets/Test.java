@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sdzee.forms.ConnectionForm;
+
 /**
  * Servlet implementation class Test
  */
@@ -33,9 +35,11 @@ public class Test extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nom = request.getParameter("nom");
+		ConnectionForm form=new ConnectionForm();
+		form.verifierIdentifiants(request);
+		request.setAttribute("form", form);
 		
-		request.setAttribute("nom", nom);
+		
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
 

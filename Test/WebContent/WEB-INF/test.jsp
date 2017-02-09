@@ -9,13 +9,21 @@
 </head>
 <body>
 
-<c:if test="${!empty nom}">
-<p><c:out value="Bonjour, ton nom est ${param.nom}"/></p>
+<c:if test="${!empty form.resultat}">
+<p><c:out value="${form.resultat}"/></p>
 </c:if>
 
 	<form method="post" action="toto">
-		<label for="name">Nom: </label>
-		<input type="text" id="nom" name="nom"/>
+		<p>
+		<label for="login">Nom: </label>
+		<input type="text" id="login" name="login"/>
+		</p>
+		
+		<p>
+		<label for="psswd">Password: </label>
+		<input type="password" id="psswd" name="psswd"/>
+		</p>
+		
 		<input type="submit" name="submit"/>
 	
 	</form>
